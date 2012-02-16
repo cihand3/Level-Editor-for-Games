@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Line Editor</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	     body{
+                background: #CCC;
+			    font-family: 'Helvetica Nueue', Helvetica, Arial, sans-serif; 
+         }
+            
+        input{
+            	font-size: 20px;
+            	width: 100px;
+            	border-radius: 6px 6px;
+            	webkit-border-radius: 6px 6px;
+            	moz-border-radius: 6px 6px;
+            	o-border-radius: 6px 6px;
+            	margin: 10px 10px;
+         }
+         .small-text{
+                font-weight: bold;
+                font-size: 16px;
+                margin-top: 40px;
+                color: #000;
+                text-align: center;
+         }
+         .option-text{
+                margin-top: 30px;
+                font-size: 10px;
+                font-style: italic;
+                cursor: pointer;
+                text-align: center;
+         }
+		 #infoDiv{
+                background: #0AB221 ;
+                height: 100%;
+                width: 150px;
+                right: 0px;
+                top: 0px;
+                z-index: 999;
+                position: fixed;
+                box-shadow: 1px 1px 13px #000;
+                transition: all .3s linear;
+                -webkit-transition: all .3s linear;
+                -moz-transition: all .3s linear;
+                -o-transition: all .3s linear;
+                -ms-transition: all .3s linear;
+            }
+		
+
+	
+</style>
+<script src="custom.js"></script>
+
+</head>
+<body>
+<div id="infoDiv">
+    <div class="small-text">Line Editor</div>
+    <div class="option-text" id="undoOption">⬅ Undo</div>
+    <div class="option-text" id="clearOption">❏ Clear Screen</div>
+    <div class="option-text" id="exportOption">⤿ Export</div>
+	<div class="option-text"> Import Lines <br><input style="font-size:10px;" type="file" id="importOption"> </div>
+	<div class="option-text">  Import Bg Image <br><input style="font-size:10px;" type="file" id="imageImportOption"> </div>
+	<div class="option-text"> Import Sprite Image <br><input style="font-size:10px;" type="file" id="spriteImportOption"> </div>
+	<div class="option-text" id="coordinates"></div>
+	<div class="option-text" id="obj-coordinates"></div>
+	<div class="option-text" style="visibility: hidden;" id="infoBar">
+		Name: <input type="text" style="font-size: 10px;padding: 5px;" id="editName" />
+		Tiles: <input type="text" style="font-size: 10px;width: 15px;padding: 5px;" id="tileX" /> | <input type="text" style="font-size: 10px;width: 15px;padding: 5px;" id="tileY" />
+		</div>
+    <div>
+</div>
+</body>
+</html>
